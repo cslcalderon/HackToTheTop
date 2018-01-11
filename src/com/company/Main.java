@@ -1,5 +1,7 @@
 package com.company;
 
+
+
 import java.util.*;
 
 import java.util.Scanner;
@@ -30,6 +32,16 @@ public class Main {
 
     public static void introduceGame() {
         System.out.print('\u000C');
+        System.out.println("" +
+                "\n   * * *  *                                            " +
+                "\n   *        *                     *  *  *                *      *  *             " +
+                "\n   *  _____ *        *  * *      *       *     * * *     *     * *  *  " +
+                "\n   *                *      *      *  *  *     *     *    *     *" +
+                "\n   *                 * *  *                     *  *     *       * *    " +
+                "\n   *                                               *                            " +
+                "\n                                               *   *" +
+                "\n                                                 *" +
+                "\n                                                                 Inc.");
         System.out.println("You will be playing as Jamie, a top programmer in their college class." +
                 "\nAll throughout college they were known for their programming skills, and during it even" +
                 "\ngot offered a job rom a big company named Poogle Inc. " +
@@ -83,7 +95,7 @@ public class Main {
         System.out.print('\u000C');
         Answer = "";
         System.out.println("" +
-                   "_______________________________________" +
+                "_______________________________________" +
                 "\n|  __________________________________   |" +
                 "\n|  *      Mission // from: unknown   *  |" +
                 "\n|  |    Job offer// from : mom       |  |" +
@@ -108,6 +120,20 @@ public class Main {
         }
         if (Answer.equalsIgnoreCase("read")) {
             System.out.print('\u000C');
+            System.out.println("" +
+                    "_______________________________________" +
+                    "\n|  __________________________________   |" +
+                    "\n|  *   Dear Jamie Coodes,            *  |" +
+                    "\n|  |   ----------------------        |  |" +
+                    "\n|  * ----------------------------    *  |" +
+                    "\n|  | ----------------------------    |  |" +
+                    "\n|  * --------------please respond    *  | * * * *" +
+                    "\n|  |_________________________________|  |          *" +
+                    "\n| ______________________________________|         *" +
+                    "\n   /  |q| |w| |e| |r| |t| |y| |u| |i| \\         *" +
+                    "\n  / |a| |s| |d| |f| |g| |h| |j| |k| |l| \\        * " +
+                    "\n / ____|z| |x| |c| |v| |b| |n| |m|_______\\    (_\\_)" +
+                    "\n                                               \\_\\_\\ ");
             System.out.println("You opened the message, cause why not, and then you read it. It reads : " +
                     "\n \"Dear Jamie Coodes, we are contacting you on behalf of a very important job offer. We are led to " +
                     "\nbelieve that the company Poogle Inc. is using their power for evil, taking personal information from " +
@@ -225,11 +251,11 @@ public class Main {
         if (WE > 0) {
             System.out.print('\u000C');
             System.out.println("-----------------------" +
-                                 "\n|    |1|   |2|   |3|     |" +
-                                 "\n|    |4|   |5|   |6|     |" +
-                                 "\n|    |7|   |8|   |9|     |" +
-                                 "\n|          |0|           |" +
-                                 "\n-------------------------");
+                    "\n|    |1|   |2|   |3|     |" +
+                    "\n|    |4|   |5|   |6|     |" +
+                    "\n|    |7|   |8|   |9|     |" +
+                    "\n|          |0|           |" +
+                    "\n-------------------------");
             System.out.println("You got to the room now, but there is a three part password to complete" +
                     "\nyou tell Arthur you have the three combinations narrowed down which are " +
                     "\n" +
@@ -289,9 +315,9 @@ public class Main {
         }
         System.out.print('\u000C');
         if (Answer.equalsIgnoreCase("brag")) {
-            WE--;
+            WE-= 2;
             System.out.println("The team overhears and they think you are" +
-                    "\nself-entitled. 1 WE point has been deducted. You " +
+                    "\nself-entitled. 2 WE point has been deducted. You " +
                     "\nnow have " + WE + " WE.");
         } else if (Answer.equalsIgnoreCase("thank")) {
             WE +=2;
@@ -431,14 +457,15 @@ public class Main {
     public static void nameChange() {
         System.out.print('\u000C');
         System.out.println("" +
-                   "_________________________________  ________________________________" +
-                "\n|                                  |   |-------------------------|  |" +
-                "\n|     _________________________    |   |    ID Number : 6712     |  |" +
-                "\n|__(__VISSA_________________  ) ___|   |     (  0   ~   0  )     |  |" +
-                "\n|                                  |   |        /       \\        |  |" +
-                "\n|  Please return to Jamie Coodes   |   |        Jamie Coodes     |  |" +
-                "\n|_____if found at 214-000-000______|   |-------------------------|  | " +
-                "\n|__________________________________|________________________________|");
+                "\n  ______________________________________________________________________" +
+                "\n * _________________________________  ________________________________  *" +
+                "\n * |                                  |   |-------------------------| | *" +
+                "\n * |     _________________________    |   |    ID Number : 6712     | | *" +
+                "\n * |__(__VISSA_________________  ) ___|   |     (  0   ~   0  )     | | *" +
+                "\n * |                                  |   |        /       \\       | | *" +
+                "\n * |  Please return to Jamie Coodes   |   |        Jamie Coodes     | | *" +
+                "\n * |_____if found at 214-000-000______|   |-------------------------| | *" +
+                "\n |_____________________________________________________________________ *");
         System.out.println("As you sit in your room, you access the employee files from the flash drive." +
                 "\nYou need to make your ID valid. Luckily you have your old ID in your wallet, and you can " +
                 "\nuse the code on it to change its validity. You go and get it and it says '6712'" +
@@ -481,6 +508,7 @@ public class Main {
                 "\nyou already have your badge, that reads " + Name + " Coodes. You enter the already crowded building" +
                 "\nas an employee, and get to the room where that is controlling all the broadcasting devices at the event. ");
         continued();
+        System.out.print('\u000C');
         System.out.println("As you make your way into the room, you bump into your old supervisor. You hope he doesn't recognize" +
                 "\nyou, but after looking at your badge and at your face, something seems to click. \"You don't look like a " +
                 "\n " + Name + " to me . . . Jamie? Is that you?\", he asks.");
@@ -489,11 +517,13 @@ public class Main {
             Answer = input.next();
         }
         if (Answer.equalsIgnoreCase("deny")) {
+            System.out.print('\u000C');
             WE -= 6;
             System.out.println("You deny, and he looks at you suspiciously. Through the communicator you have" +
                     "\nJohn tells you how that is the easiest way to blow your cover. You get deducted 6 we points." +
                     "\nYou now have " + WE + " WE points");
         } else {
+            System.out.print('\u000C');
             WE += 2;
             System.out.println("You talk around the subject and smoothly avert from"  +
                     "\nthe topic. You get awarded" + "3 WE points.");
@@ -509,15 +539,19 @@ public class Main {
             Answer = input.next();
         }
         if (Answer.equalsIgnoreCase("accuse")) {
+            System.out.print('\u000C');
             System.out.println("You accuse him of mistaking you for someone such as a Jamie, and tell " +
                     "him that you, " + Name + " Coodes have no relation to this \"Jamie\" character he " +
                     "\nis talking about. He seems surprised at the accusation, but still doesn't " +
                     "\nconfront you about anything. ");
         } else {
+            System.out.print('\u000C');
             System.out.println("You say that you think he is a great boss, and that he shouldn't do " +
                     "\nanything differently, For you, " + Name + " Coodes approves of everything " +
                     "\nhe is doing. He looks at you weird and you awkwardly smile.");
         }
+        continued();
+        System.out.print('\u000C');
         System.out.println("After a couple moments, you start talking more. Something seems off about the conversation, and " +
                 "\nyou try to exit, until he stops you and immediately says, \"Stop playing these games Jamie\", the " +
                 "\nsudden sentence shocks you and you stop trying to get away.");
@@ -533,7 +567,7 @@ public class Main {
                 "\n" +
                 "\nHe says that you can return to Poogle Inc., with your previous job title, and a secure job and stable" +
                 "\nincome, something that isn't gauranteed if you continue with the 'mission'. He says that your record" +
-                "\nwould be cleaned, and you would even get a down payment of $300,000 if you accept." +
+                "\nwould be cleaned, and you would even get a down payment of $150,000 if you accept." +
                 "\n" +
                 "\nYou notice that as he says this, he allows easy access to the room where you can out the company for " +
                 "\nall they have done and bring justice to all that has been going on. You are left with a choice of 'accepting' the " +
@@ -544,6 +578,7 @@ public class Main {
             Answer = input.next();
         }
         if (Answer.equalsIgnoreCase("accepting")) {
+            System.out.print('\u000C');
             System.out.println("You accept the offer. You give your boss all the information about the mission and" +
                     "\nyou out your friends, resulting them being arrested and thrown in jail. As promised, you get your share" +
                     "\nof the deal. You have a stable job and are even able to continue to create you own bussiness." +
@@ -555,6 +590,7 @@ public class Main {
             WEPoints();
             alreadyPlayed = false;
         } else {
+            System.out.print('\u000C');
             System.out.println("You ran into the room, plugging in the flash drive, and immediately on every sing;e" +
                     "\nscreen there was videos and files exposing Poogle Inc., along with files distributed widely to" +
                     "\nlocal new's outlets." +
@@ -673,7 +709,7 @@ public class Main {
             System.out.println("Bethany hears what you tell Arthur and she asks you " +
                     "\nif you are sure that is the best option.");
             System.out.println("Do you say yes to continue 'risky' path or do you tell" +
-                    "Arthur to go the 'safe' path' ?");
+                    "\nArthur to go the 'safe' path' ?");
             Answer = input.next();
             while (!Answer.equalsIgnoreCase("safe") && !Answer.equalsIgnoreCase("risky")) {
                 System.out.println("Type ''safe' or 'risky' to choose a path.");
@@ -960,6 +996,7 @@ public class Main {
                                 }
                                 if (Answer.equalsIgnoreCase("9765")) {
                                     System.out.println();
+                                    System.out.print('\u000C');
                                     WE += 2;
                                     System.out.println("You got finally cracked the code! All you have to do now " +
                                             "\nis wait until the big Poogle Event so you can out the company for all they have " +
