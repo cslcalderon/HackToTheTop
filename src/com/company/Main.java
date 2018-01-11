@@ -82,6 +82,21 @@ public class Main {
     public static void email1() {
         System.out.print('\u000C');
         Answer = "";
+        System.out.println("" +
+                   "_______________________________________" +
+                "\n|  __________________________________   |" +
+                "\n|  *      Mission // from: unknown   *  |" +
+                "\n|  |    Job offer// from : mom       |  |" +
+                "\n|  * BUY BOOTS TODAY// from : Targit *  |" +
+                "\n|  |                                 |  |" +
+                "\n|  *                                 *  | * * * *" +
+                "\n|  |_________________________________|  |          *" +
+                "\n| ______________________________________|         *" +
+                "\n   /  |q| |w| |e| |r| |t| |y| |u| |i| \\         *" +
+                "\n  / |a| |s| |d| |f| |g| |h| |j| |k| |l| \\        * " +
+                "\n / ____|z| |x| |c| |v| |b| |n| |m|_______\\    (_\\_)" +
+                "\n                                               \\_\\_\\ ");
+        System.out.println();
         System.out.print("You were just going about your day one day, when you suddenly received an email" +
                 "\nfrom an encrypted address. " +
                 "\nDo you 'read' or 'ignore' ?");
@@ -140,6 +155,7 @@ public class Main {
                 "\nAs of now you have " + WE + " WE points, so choose wisely.");
         continued();
         System.out.print('\u000C');
+
         System.out.println("After two days of responding the email, you think it was just a scam, but then you get " +
                 "\nanother email from the same address. It tells you to meet somewhere. It's a hotel nearby Poogle Inc." +
                 "\n database. You know it's a far drive, and you need" +
@@ -152,6 +168,14 @@ public class Main {
             }
             if (Answer.equalsIgnoreCase("leave")) {
                 System.out.print('\u000C');
+                System.out.println("" +
+                        "                                    " +
+                        "\n                                      |  |0|   |0|  |0|  |0|   |0|   |" +
+                        "\n                                      |  |0|   |0|  |0|  |0|   |0|   |" +
+                        "\n     ____________________             |  |0|   |0|  |0|  |0|   |0|   |" +
+                        "\n  /     |_____|  |___    \\____        |  |0|       _______     |0|   |" +
+                        "\n |      _________          ___ \\      |  |0|     |  o |  o  |  |0|   |" +
+                        "\n  \\ ( 0 )   /     \\( 0 ) /            |          |    |     |        |");
                 System.out.println("You arrive at the lobby of the hotel and immediately you are taken into a nearby seating area" +
                         "\nwhere you finally meet the group of people that hired you. They seem like nice people, and" +
                         "\nwell dressed. They introduce themselves as Arthur, Bethany, and John. They explain to you that" +
@@ -200,6 +224,12 @@ public class Main {
     public static void passwordDecode() {
         if (WE > 0) {
             System.out.print('\u000C');
+            System.out.println("-----------------------" +
+                                 "\n|    |1|   |2|   |3|     |" +
+                                 "\n|    |4|   |5|   |6|     |" +
+                                 "\n|    |7|   |8|   |9|     |" +
+                                 "\n|          |0|           |" +
+                                 "\n-------------------------");
             System.out.println("You got to the room now, but there is a three part password to complete" +
                     "\nyou tell Arthur you have the three combinations narrowed down which are " +
                     "\n" +
@@ -297,8 +327,9 @@ public class Main {
         }
         System.out.print('\u000C');
         if (Answer.equalsIgnoreCase("truth")) {
+            WE +=2;
             System.out.println("Arthur understands, and appreciates you being honest" +
-                    "\nwith the team. You talk until dinner arrives. You have earned 1" +
+                    "\nwith the team. You talk until dinner arrives. You have earned 2" +
                     "\nWE point. You now have " + WE + " WE points.");
         } else {
             System.out.print('\u000C');
@@ -340,10 +371,10 @@ public class Main {
                 "\nplan is. It consists of a person going in, plugging in the flash drive with " +
                 "\nthe evidence along with a virus that will broadcast everything about Poogle Inc.." +
                 "\nAs you eat, you question who is the person going into the building." +
-                "\nBethany casually says it's you, and you choke on your food. You can either play " +
-                "\nit off or act natural.");
+                "\nBethany casually says it's you, and you choke on your food. You can either" +
+                "\nfreak out or act natural.");
         while (!Answer.equalsIgnoreCase("freak") && !Answer.equalsIgnoreCase("natural")) {
-            System.out.println("Do 'freak' and reject the offer, or do you act 'natural and question calmly?");
+            System.out.println("Do 'freak' and reject the offer, or do you act 'natural' and question calmly?");
             Answer = input.next();
         }
         if (Answer.equalsIgnoreCase("freak")) {
@@ -354,7 +385,7 @@ public class Main {
         } else if (Answer.equalsIgnoreCase("natural")) {
             System.out.print('\u000C');
             System.out.println("The team appreciates your calm, and you question why" +
-                    "\nyou need to be the one to do it.");
+                    "\nyou need to be the one to do it. ");
             continued();
         }
         System.out.print('\u000C');
@@ -399,6 +430,15 @@ public class Main {
 
     public static void nameChange() {
         System.out.print('\u000C');
+        System.out.println("" +
+                   "_________________________________  ________________________________" +
+                "\n|                                  |   |-------------------------|  |" +
+                "\n|     _________________________    |   |    ID Number : 6712     |  |" +
+                "\n|__(__VISSA_________________  ) ___|   |     (  0   ~   0  )     |  |" +
+                "\n|                                  |   |        /       \\        |  |" +
+                "\n|  Please return to Jamie Coodes   |   |        Jamie Coodes     |  |" +
+                "\n|_____if found at 214-000-000______|   |-------------------------|  | " +
+                "\n|__________________________________|________________________________|");
         System.out.println("As you sit in your room, you access the employee files from the flash drive." +
                 "\nYou need to make your ID valid. Luckily you have your old ID in your wallet, and you can " +
                 "\nuse the code on it to change its validity. You go and get it and it says '6712'" +
@@ -411,7 +451,7 @@ public class Main {
             System.out.println("You got in, and you read your information. You just need to change your name " +
                     "\nto something other than what your name is already along with activating your ID to get into places." +
                     "\n" +
-                    "\nYou change your name to something different, what is it?");
+                    "\nYou change your first name to something different, what is it?");
             Name = input.next();
             continued();
             Answer = "";
@@ -749,7 +789,6 @@ public class Main {
                     flashDriveIn();
                 }
             } else if (Answer.equalsIgnoreCase("left")) {
-                WE++;
                 System.out.print('\u000C');
                 System.out.println("You click on the left folder and you see that it's employee files." +
                         "\nYou realize you can clear your file now and do whatever you want" +
