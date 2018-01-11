@@ -33,8 +33,9 @@ public class Main {
         System.out.println("You will be playing as Jamie, a top programmer in their college class." +
                 "\nAll throughout college they were known for their programming skills, and during it even" +
                 "\ngot offered a job rom a big company named Poogle Inc. " +
-                "\nYou were so excited, but after a " +
-                "\nwhile you suspected something from the company, seeing some skeptical code.");
+                "\nYou, Jamie, were so excited, but after a " +
+                "\nwhile you suspected something from the company, " +
+                "\nseeing some skeptical code.");
         continued();
         if (Answer.equalsIgnoreCase("continue")) {
             System.out.print('\u000C');
@@ -46,9 +47,9 @@ public class Main {
                     "\n" +
                     "\nThis will go through something that changed your life forever. Remember that you are trying to " +
                     "\nbuild your life back up and you are (very) desperate to do so. Keep this in mind  " +
-                    "\nas you go through, go through your journey. To answer type out anything" +
+                    "\nas you go through your journey. To answer type out anything" +
                     "\nin '' (single quotes), to guide " +
-                    "\nthe story to where you can be successfull in the end.  ");
+                    "\nthe story to where you can be successful in the end.  ");
             System.out.println();
             continued();
             game();
@@ -56,9 +57,6 @@ public class Main {
     }
 
     public static void game() {
-        System.out.print('\u000C');
-        System.out.print("starting Game ....");
-        System.out.println();
         WE = 10;
         if (alreadyPlayed == true) {
             System.out.println("You currently have " + WE + " WE points");
@@ -162,11 +160,12 @@ public class Main {
                         "\nreserved.");
                 continued();
             } else if (Answer.equalsIgnoreCase("wait")) {
-                WE -= 3;
+                WE -= 2;
                 System.out.print('\u000C');
                 System.out.println("You wait to go and arrive late. The team seems a little annoyed by " +
-                        "\nyour actions. You continue but you get 3 WE points deducted. " +
-                        "You arrive at the lobby of the hotel and immediately you are taken into a nearby seating area" +
+                        "\nyour actions. You continue but you get 2 WE points deducted. " +
+                        "\n" +
+                        "\nYou arrive at the lobby of the hotel and immediately you are taken into a nearby seating area" +
                         "\nwhere you finally meet the group of people that hired you. They seem like nice people, and" +
                         "\nwell dressed. They introduce themselves as Arthur, Bethany, and John. They explain to you that" +
                         "\nthe plan consists of getting a flash drive into Poogle Inc. 's databases, so that you can access their files." +
@@ -265,7 +264,10 @@ public class Main {
                     "\nself-entitled. 1 WE point has been deducted. You " +
                     "\nnow have " + WE + " WE.");
         } else if (Answer.equalsIgnoreCase("thank")) {
-            System.out.println("Arthur says it's no problem!");
+            WE +=2;
+            System.out.println("Arthur says it's no problem! He thinks " +
+                    "\nyou are pretty nice and you get 2 WE points!");
+            sayWEPoints();
         }
         continued();
         System.out.print('\u000C');
@@ -320,7 +322,7 @@ public class Main {
                     "\nhe tells you that he got into the mission because his mother" +
                     "\nwas a victim to Poogle Inc.'s crimes, resulting in her eviction" +
                     "\nand debt. You share your experience before Poogle Inc. and have a " +
-                    "\ngood talk. You earned 2WE points!");
+                    "\ngood talk. You earned 2 WE points!");
 
             sayWEPoints();
 
@@ -367,9 +369,9 @@ public class Main {
             Answer = input.next();
         }
         if (Answer.equalsIgnoreCase("agree")) {
-            WE += 5;
+            WE += 4;
             System.out.print('\u000C');
-            System.out.println("The team is happy that you agree and you earn 5WE." +
+            System.out.println("The team is happy that you agree and you earn 4 WE." +
                     "\nYou dismiss yourself to your room" +
                     "\nand start hatching up a plan.");
             sayWEPoints();
@@ -452,9 +454,10 @@ public class Main {
                     "\nJohn tells you how that is the easiest way to blow your cover. You get deducted 6 we points." +
                     "\nYou now have " + WE + " WE points");
         } else {
-            WE += 3;
-            System.out.println("You talk around the subject and smoothly avert from the topic. You get awarded" +
-                    "\n3 WE points. You now have " + WE + " WE points");
+            WE += 2;
+            System.out.println("You talk around the subject and smoothly avert from"  +
+                    "\nthe topic. You get awarded" + "3 WE points.");
+
         }
         continued();
         System.out.println("He then tries to get you to talk more. You know you have at least ten " +
@@ -620,11 +623,11 @@ public class Main {
     public static void choosenPath() {
         if (Answer.equalsIgnoreCase("safe")) {
             System.out.print('\u000C');
-            WE -= 3;
+            WE -= 2;
             System.out.println("Turns out that as Arthur went the safe path, he drew suspicion to him on" +
                     "\nthe security cameras, having to get off track to not get caught, going down the risky" +
                     "\npath after all." +
-                    "\nYou have been deducted 3 WE points. You now have " + WE + " WE points.");
+                    "\nYou have been deducted 2 WE points. You now have " + WE + " WE points.");
         } else if (Answer.equalsIgnoreCase("risky")) {
             System.out.print('\u000C');
             System.out.println("Bethany hears what you tell Arthur and she asks you " +
@@ -638,10 +641,10 @@ public class Main {
             }
             if (Answer.equalsIgnoreCase("risky")) {
                 System.out.print('\u000C');
-                WE += 3;
+                WE += 2;
                 System.out.println("The team gains more confidence in you as Arthur successfully" +
                         "\nmakes it to the room where the flash drive needs to be put in. You" +
-                        "\nhave been rewarded 3 WE points. " +
+                        "\nhave been rewarded 2 WE points. " +
                         "\nYou now have " + WE + " WE points.");
             } else if (Answer.equalsIgnoreCase("safe")) {
                 Answer = "safe";
@@ -658,9 +661,11 @@ public class Main {
                         "\n now what is your second option?");
             } else {
                 if (WE > 0) {
-                    WE -= 2;
+
                     System.out.println("Arthur typed it in, but it was wrong. You have been deducted" +
-                            "\n2 WE points. You now have " + WE + " WE points.");
+                            "\n2 WE points.");
+                    WE -= 2;
+                    sayWEPoints();
                     continued();
                     passwordDecode();
                 } else {
@@ -682,6 +687,7 @@ public class Main {
                             Answer = input.next();
                             WE -= 2;
                             System.out.println();
+                            System.out.println("You got deducted 2 WE points. ");
                             sayWEPoints();
                         }
                     }
@@ -734,8 +740,8 @@ public class Main {
                 }
                 if (Answer.equalsIgnoreCase("copy")) {
                     System.out.print('\u000C');
-                    WE += 5;
-                    System.out.println("You successfully copied the files and you get 5 WE points!" +
+                    WE += 4;
+                    System.out.println("You successfully copied the files and you get 4 WE points!" +
                             "\nNow you have " + WE + " WE points.");
                     sayWEPoints();
                     done = true;
@@ -748,25 +754,26 @@ public class Main {
                 System.out.println("You click on the left folder and you see that it's employee files." +
                         "\nYou realize you can clear your file now and do whatever you want" +
                         "\nIt is not ensured that this will be successful though, and you are better" +
-                        "\noff helping your team. Do try to clear your name?");
+                        "\noff helping your team. Do you try to clear your name?");
                 while (!Answer.equalsIgnoreCase("yes") && !Answer.equalsIgnoreCase("no")) {
                     System.out.println("'Yes' or 'no' ?");
                     Answer = input.next();
                 }
                 if (Answer.equalsIgnoreCase("yes")) {
-                    WE -= 5;
+                    WE -= 4;
                     System.out.print('\u000C');
                     System.out.println("Bethany and John notice what you are doing and you refuse to " +
                             "\nlisten to them to continue the mission, set on clearing your name In the end,  " +
                             "\nArthur has to escape quickly. You have to get him into the building again, and your " +
-                            "\nteam is not happy. You have been deducted 5 WE points. When everything is ready" +
+                            "\nteam is not happy. You have been deducted 4 WE points. When everything is ready" +
                             "\nand your team is together again, you give it another go.");
                     sayWEPoints();
                     continued();
                     choosePath();
                 } else if (Answer.equalsIgnoreCase("no")) {
+                    WE += 2;
                     System.out.println("John sees that you ignored an opportunity to help yourself." +
-                            "\nYou are rewarded one WE point.");
+                            "\nYou are rewarded 2 WE point.");
                     sayWEPoints();
                     continued();
                     flashDriveIn();
@@ -792,10 +799,10 @@ public class Main {
                     Answer = input.next();
                 }
                 if (Answer.equalsIgnoreCase("1234") || Answer.equalsIgnoreCase("5678") || Answer.equalsIgnoreCase("9101")) {
-                    WE -= 5;
+                    WE -= 4;
                     System.out.println("You tried the number in each spot, but it didn't work" +
                             "\n, and because of how much you tried it," +
-                            "\nyou have been deducted 5 WE points, you now have " + WE + " WE points. " +
+                            "\nyou have been deducted 4 WE points, you now have " + WE + " WE points. " +
                             "\nIf you have tried other numbers in this set, maybe you should return to another set.");
                     while (!Answer.equalsIgnoreCase("1") && !Answer.equalsIgnoreCase("return")) {
                         System.out.println("Type '1' to continue trying set 1 or type 'return' to continue to sets.");
@@ -825,10 +832,10 @@ public class Main {
                         Answer = input.next();
                     }
                     if (Answer.equalsIgnoreCase("0098") || Answer.equalsIgnoreCase("0000") || Answer.equalsIgnoreCase("9998")) {
-                        WE -= 5;
+                        WE -= 4;
                         System.out.println("You tried the number in each spot, but it didn't work" +
                                 "\n, and because of how much you tried it," +
-                                "\nyou have been deducted 5 WE points, you now have " + WE + " WE points. " +
+                                "\nyou have been deducted 4 WE points, you now have " + WE + " WE points. " +
                                 "\nIf you have tried other numbers in this set, maybe you should 'return to another set.");
                         while (!Answer.equalsIgnoreCase("3") && !Answer.equalsIgnoreCase("return")) {
                             System.out.println("Type '3' to continue trying set 3 or type 'return' to continue to sets.");
@@ -852,7 +859,7 @@ public class Main {
             if (WE > 0) {
                 if (Answer.equalsIgnoreCase("2")) {
                     System.out.println();
-                    System.out.println("You choose set 2, which consists of '9765' '1254' and '7584'" +
+                    System.out.println("You chose set 2, which consists of '9765' '1254' and '7584'" +
                             "\nYou can choose to put in a password, or go back to choose a " +
                             "\ndifferent set.");
                     while (!Answer.equalsIgnoreCase("9765") && !Answer.equalsIgnoreCase("1254") && !Answer.equalsIgnoreCase("7584") && !Answer.equalsIgnoreCase("back")) {
@@ -861,10 +868,11 @@ public class Main {
                     }
 
                     if (Answer.equalsIgnoreCase("9765") || Answer.equalsIgnoreCase("7584")) {
-                        WE -= 3;
+                        WE -= 4;
                         System.out.println("You typed it in, but it was wrong. You have been deducted" +
-                                "\n2 WE points. You now have " + WE + " WE points. ");
+                                "\n4 WE points. You now have " + WE + " WE points. ");
                         Answer = "2";
+                        continued();
 
                         chooseSetOfPasswords();
                     } else if (Answer.equalsIgnoreCase("back")) {
@@ -885,7 +893,12 @@ public class Main {
                             if (Answer.equalsIgnoreCase("9765")) {
                                 System.out.println("It was wrong, but you if the first number was right" +
                                         "\nthen you must be on thr right track. You can choose to put in the " +
-                                        "\nremaining number number or return to sets.");
+                                        "\nremaining number number or return to sets. You have been dedcuted " +
+                                        "\n2 WE points.");
+
+                                sayWEPoints();
+                                continued();
+
                                 while (!Answer.equalsIgnoreCase("2") && !Answer.equalsIgnoreCase("return")) {
                                     System.out.println("Type '2' to continue trying set 2 or type 'return' to continue to sets.");
                                     Answer = input.next();
@@ -908,10 +921,10 @@ public class Main {
                                 }
                                 if (Answer.equalsIgnoreCase("9765")) {
                                     System.out.println();
-                                    WE += 3;
+                                    WE += 2;
                                     System.out.println("You got finally cracked the code! All you have to do now " +
                                             "\nis wait until the big Poogle Event so you can out the company for all they have " +
-                                            "\ndone. You also get 3 WE points, now." +
+                                            "\ndone. You also get 2 WE points, now." +
                                             "\nyou have " + WE + " WE points.");
                                     done = true;
                                     continued();
@@ -919,7 +932,8 @@ public class Main {
                                     System.out.println();
                                     WE -= 4;
                                     System.out.println("You got it wrong, and also" +
-                                            "\nyou got deducted 4 WE points. You now have " + WE + " WE points.");
+                                            "\nyou got deducted 4 WE points.");
+                                    sayWEPoints();
                                     continued();
                                     chooseSetOfPasswords();
                                 }
